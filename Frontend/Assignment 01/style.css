@@ -1,0 +1,52 @@
+@font-face {
+    font-family: roboto;
+    src: url(./fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{  
+    text-align: center; 
+    font-family: roboto;
+}
+
+header, footer{
+    background-color: rgb(8, 8, 61);
+    padding: 50px;
+    color: white;
+}
+
+header h1{
+    font-size: 40px;
+}
+ 
+div{ 
+    padding: 100px;
+    margin: 20px 80px;
+}
+
+div h2{
+    font-size: 35px;
+}
+
+div p{ 
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+div:nth-child(2){
+    background-color: lightblue;
+}
+div:nth-child(3){
+    background-color: lightsalmon;
+}
+div:nth-child(4){
+    background-color: rgb(165, 126, 165);
+}
+div:nth-child(5){
+    background-color: lightgreen;
+}
