@@ -10,6 +10,7 @@ This repository contains all my assignments and projects from **Sheriyans Coding
 |-------------|--------------|-----------|
 | Assignment 01 | Resume Website | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2001/index.html) |
 | Assignment 02 | Hero Section | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2002/index.html) |
+| Assignment 03 | Sweaters | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2003/index.html) |
 
 ---
 
