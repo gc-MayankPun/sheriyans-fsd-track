@@ -1,0 +1,73 @@
+@font-face {
+    font-family: roboto;
+    src: url(./assets/Roboto-VariableFont_wdth\,wght.ttf);
+} 
+@font-face {
+    font-family: oakland;
+    src: url(./assets/OAKLAND.ttf);
+} 
+@font-face {
+    font-family: midnight-gelactic;
+    src: url(./assets/Midnight\ Gelactic\ DEMO\ VERSION.ttf);
+}
+@font-face {
+    font-family: oswald;
+    src: url(./assets/Oswald-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.herosection{ 
+    height: 100vh;
+    width: 100%;
+    background-image: url(./assets/image-7.jpg);
+    background-size: cover;  
+    padding-top: 150px;
+}
+
+h1{
+    font-size: 80px;
+    text-align: center;  
+    /* font-family: oakland; */
+    /* font-family: midnight-gelactic; */
+    font-family: oswald; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+p{ 
+    font-size: 18px;
+    text-align: center;  
+    font-family: roboto; 
+}
+
+button{
+    padding: 8px 15px;
+    border-radius: 8px;
+    outline: none;
+    border: none;   
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: roboto; 
+}
+
+button { 
+  background: rgba(5, 199, 224, 0.15);
+  color: #fff;
+  padding: 12px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
