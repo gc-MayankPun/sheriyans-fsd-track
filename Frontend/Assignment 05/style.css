@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #111; 
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid; 
+  grid-template-areas:
+    "section1 section2 section3 section4"
+    "section1 section5 section5 section4"
+    "section6 section5 section5 section9"
+    "section7 section7 section8 section9";
+  gap: 10px;
+  padding: 10px;
+}
+
+section {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s ease;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+section>div{
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background-color: #111; 
+  opacity: .7;
+  color: White;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  bottom: -50px;
+  transition: .3s ease;
+  border-radius: 10px;
+}
+section:hover{
+  transform: scale(.9);
+}
+section:hover >div{
+  bottom: 0;
+}
+
+section:nth-child(1) {
+  grid-area: section1;
+  background-image: url(https://i.pinimg.com/736x/a4/48/6c/a4486c09fc8c1d236b1d60af3236d389.jpg);
+}
+section:nth-child(2) {
+  grid-area: section2; 
+  background-image: url(https://i.pinimg.com/1200x/10/7b/a8/107ba836b7e558d6005b55c475a1bb1b.jpg);
+}
+section:nth-child(3) {
+  grid-area: section3;
+  background-image: url(https://i.pinimg.com/736x/00/88/be/0088be9db07f9d861f5c8871e2d3b62a.jpg);
+}
+section:nth-child(4) {
+  grid-area: section4;
+  background-image: url(https://i.pinimg.com/736x/3d/04/bb/3d04bb0273e52890277e8be37fbd0080.jpg);
+}
+section:nth-child(5) {
+  grid-area: section5; 
+  background-image: url(https://i.pinimg.com/736x/7a/f3/ba/7af3babb49686deac4350e5c4479b380.jpg);
+} 
+section:nth-child(6) {
+  grid-area: section6; 
+  background-image: url(https://i.pinimg.com/736x/fe/3a/49/fe3a496d00800816e4e5a9d115af132f.jpg);
+}
+section:nth-child(7) {
+  grid-area: section7;
+  background-image: url(https://i.pinimg.com/736x/7e/90/ff/7e90ff851c9d07a6d49a25ee8ea3768a.jpg);
+}
+section:nth-child(8) {
+  grid-area: section8;
+  background-image: url(https://i.pinimg.com/1200x/9e/ef/be/9eefbea97ce669db3c4366f86e715236.jpg);
+}
+section:nth-child(9) {
+  grid-area: section9;
+  background-image: url(https://i.pinimg.com/736x/85/e6/47/85e64767b129d2cae2d1c47b1ed0aece.jpg);
+}

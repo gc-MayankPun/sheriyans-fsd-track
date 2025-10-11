@@ -12,6 +12,7 @@ This repository contains all my assignments and projects from **Sheriyans Coding
 | Assignment 02 | Hero Section | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2002/index.html) |
 | Assignment 03 | Sweaters Landing Page | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2003/index.html) |
 | Assignment 04 | iPhone Landing Page | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2004/index.html) |
+| Assignment 05 | Bento Grid | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2005/index.html) |
 
 ---
 
