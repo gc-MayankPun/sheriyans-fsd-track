@@ -1,0 +1,130 @@
+@import "capsule";
+@import "btn-container";
+@import "secondary_button";
+
+@mixin img-style($grid-area, $img) {
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: $grid-area;
+  border-radius: 20px;
+}
+
+@mixin section-1-style() {
+  padding: 20px 30px;
+  padding-bottom: 10px;
+  height: 90vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "text text img-1 img-1"
+    "text text img-1 img-1"
+    "text text img-2 img-3"
+    "monial monial img-2 img-3";
+  gap: 20px;
+
+  #text-container {
+    grid-area: text;
+
+    p {
+      font-size: 80px;
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 30px;
+    }
+    p:nth-child(1) .capsule {
+      @include capsule-style(110px);
+      background-image: url(./assets/capsule-1.png);
+      background-size: cover;
+      background-position: center;
+    }
+    p:nth-child(3) .capsule {
+      @include capsule-style(180px);
+      justify-content: space-around;
+      border: 1px solid black;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 12px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      i {
+        font-size: 16px;
+      }
+
+      &:hover {
+        background-color: #2d3142;
+        border: 1px solid #2d3142;
+        color: white;
+      }
+    }
+
+    .btn-container {
+      @include btn-container-style();
+      margin-top: 30px;
+
+      button:nth-child(1) {
+        @include secondary-button-style(transparent, white);
+        border: 1px solid #2d3142;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          background-color: #d0d4f7;
+          color: black;
+        }
+        &:hover i {
+          color: black;
+        }
+      }
+      a {
+        color: black;
+        margin-left: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+  #testimonial-container {
+    grid-area: monial;
+
+    p {
+      font-size: 14px;
+    }
+    #companies {
+      overflow: hidden;
+      height: 40px;
+      font-size: 20px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      span {
+        font-weight: bold;
+
+        img {
+          height: 50px;
+          object-fit: cover;
+        }
+      }
+      span:nth-child(4) {
+        img {
+          height: 60px;
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+  #img-1-container {
+    @include img-style(img-1, "./assets/img-1.png");
+  }
+  #img-2-container {
+    @include img-style(img-2, "./assets/img-2.png");
+  }
+  #img-3-container {
+    @include img-style(img-3, "./assets/img-3.png");
+  }
+}

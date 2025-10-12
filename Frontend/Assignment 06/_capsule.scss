@@ -1,0 +1,7 @@
+@mixin capsule-style($width) {
+  display: inline-flex;
+  font-size: 16px;
+  border-radius: 50px;
+  width: $width;
+  height: 45px;
+}

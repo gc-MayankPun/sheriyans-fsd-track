@@ -1,0 +1,59 @@
+@import "btn-container";
+
+@mixin header-style() {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 20px;
+
+    img {
+      max-height: 20px; 
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 30px;
+    a {
+      color: black;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      will-change: scale; 
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .btn-container {
+    @include btn-container-style();
+    button:nth-child(1) {
+      background-color: transparent;
+      transition: 0.3s ease;
+      cursor: pointer;
+      will-change: scale;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    button:nth-child(2) {
+      @include secondary-button-style();
+      border: 1px solid #2d3142;
+      transition: 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: #d0d4f7;
+        color: black;
+      }
+    }
+  }
+}
