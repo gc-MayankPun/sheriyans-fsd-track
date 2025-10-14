@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: grid;
+  grid-template-areas: "img-1 img-2 img-2 img-2" "img-1 img-2 img-2 img-2" "img-1 img-3 img-4 img-5";
+  gap: 20px;
+  padding: 20px;
+}
+main #img-1 {
+  background-image: url("./assets/img-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img-1;
+  border-radius: 10px;
+}
+main #img-2 {
+  background-image: url("./assets/img-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img-2;
+  border-radius: 10px;
+}
+main #img-3 {
+  background-image: url("./assets/img-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img-3;
+  border-radius: 10px;
+}
+main #img-4 {
+  background-image: url("./assets/img-4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img-4;
+  border-radius: 10px;
+}
+main #img-5 {
+  background-image: url("./assets/img-5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img-5;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

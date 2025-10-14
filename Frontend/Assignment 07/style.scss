@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin img-style($bg-img, $grid-area){
+    background-image: url($bg-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-area: $grid-area;
+    border-radius: 10px;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    color: white;
+    display: grid;
+    grid-template-areas: 
+    "img-1 img-2 img-2 img-2"
+    "img-1 img-2 img-2 img-2"
+    "img-1 img-3 img-4 img-5";
+    gap: 20px;
+    padding: 20px;
+
+    #img-1{ 
+        @include img-style("./assets/img-1.png", img-1); 
+    }#img-2{
+        @include img-style("./assets/img-2.png", img-2);  
+    }#img-3{
+        @include img-style("./assets/img-3.png", img-3); 
+    }#img-4{
+        @include img-style("./assets/img-4.png", img-4); 
+    }#img-5{
+        @include img-style("./assets/img-5.png", img-5); 
+    }
+}
