@@ -1,0 +1,24 @@
+@mixin input-style() {
+  background-color: transparent;
+  padding: 10px 15px;
+  color: white;
+  width: 50%;
+  outline: none;
+  border-radius: 5px;
+  border: 0.1px solid white;
+  &::placeholder {
+    color: grey;
+  }
+  &:focus {
+    border-color: #00b894;
+  }
+
+  /* Prevent color flicker when autofill or suggestions appear */
+  &:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}

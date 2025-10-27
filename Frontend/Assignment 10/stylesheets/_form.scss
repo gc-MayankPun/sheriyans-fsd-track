@@ -1,0 +1,23 @@
+@import "./button";
+@import "./input";
+
+@mixin form-style() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+
+  input {
+    @include input-style();
+  }
+
+  input[type="submit"]{
+    margin-top: 15px;
+  }
+
+  #btn {
+    @include btn-style();
+  }
+}

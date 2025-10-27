@@ -1,0 +1,22 @@
+@import "./form";
+@import "./container";
+
+@mixin main-style() {
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px 10px;
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    @include form-style();
+  }
+
+  .container {
+    @include container-style();
+  }
+}

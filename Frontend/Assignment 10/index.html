@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Creator</title>
+    <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Create User</h1>
+      <form>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+        />
+        <input
+          type="text"
+          name="occupation"
+          id="occupation"
+          placeholder="Enter occupation"
+        />
+        <input type="text" name="bio" id="bio" placeholder="Enter bio" />
+        <input
+          type="text"
+          name="pfp"
+          id="pfp"
+          placeholder="Enter profile link"
+        />
+        <input type="submit" id="btn" value="Create user" />
+      </form>
+      <div class="container">
+        <div class="card">
+          <img
+            src="https://imgs.search.brave.com/yjP_Vn67TtCCIY7250i45PECJjYh1WYI8zOhj9blGmA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhNV3hvYjJNM1lu/SmtZMng2T1dWNWVt/WnlaVFp0TTJnMk1q/RnBPV2syY0RKaE1q/RnJiMk5pWVNabGNE/MTJNVjluYVdaelgz/TmxZWEpqYUNaamRE/MW4vYkdnc2M1bVdv/cnlmZ0tCeDF1L2dp/cGh5LmdpZg.gif"
+            alt="${Mayank Pun| Software Engineer} pfp"
+          />
+          <div id="card-bottom">
+            <p>Mayank Pun</p>
+            <p>Software Engineer</p>
+            <p>Will happily get kidnapped by anyone offering noodles.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1621619054919-167f2fcf135c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=866"
+            alt="${Soya Hiyashi | Music Producer} pfp"
+          />
+          <div id="card-bottom">
+            <p>Soya Hiyashi</p>
+            <p>Music Producer</p>
+            <p>Creating soundscapes that move minds and hearts.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

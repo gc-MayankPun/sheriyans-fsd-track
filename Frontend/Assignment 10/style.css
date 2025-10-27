@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px 10px;
+}
+main h1 {
+  text-align: center;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+main form input {
+  background-color: transparent;
+  padding: 10px 15px;
+  color: white;
+  width: 50%;
+  outline: none;
+  border-radius: 5px;
+  border: 0.1px solid white;
+  /* Prevent color flicker when autofill or suggestions appear */
+}
+main form input::-moz-placeholder {
+  color: grey;
+}
+main form input::placeholder {
+  color: grey;
+}
+main form input:focus {
+  border-color: #00b894;
+}
+main form input:-webkit-autofill,
+main form input input:-webkit-autofill:hover, main form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+main form input[type=submit] {
+  margin-top: 15px;
+}
+main form #btn {
+  padding: 10px 22px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(14, 110, 83);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  will-change: scale;
+  transition: 0.3s ease;
+}
+main form #btn:hover {
+  background-color: rgb(14, 68, 53);
+}
+main form #btn:active {
+  scale: 0.9;
+}
+main .container {
+  height: 50vh;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 15px;
+  overflow-y: auto;
+}
+main .container::-webkit-scrollbar {
+  background-color: transparent;
+  scrollbar-width: thin;
+}
+main .container::-webkit-scrollbar-button {
+  background-color: red;
+  display: none;
+}
+main .container::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+}
+main .container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+main .container .card {
+  border: 1px solid lightseagreen;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 280px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-direction: column;
+}
+main .container .card img {
+  height: 130px;
+  width: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+main .container .card #card-bottom p:nth-child(1) {
+  font-size: 20px;
+}
+main .container .card #card-bottom p:nth-child(2) {
+  color: lightseagreen;
+  font-size: 14px;
+}
+main .container .card #card-bottom p:nth-child(3) {
+  font-size: 14px;
+  margin-top: 15px;
+}/*# sourceMappingURL=style.css.map */

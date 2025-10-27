@@ -1,0 +1,32 @@
+@mixin card-style() {
+  border: 1px solid lightseagreen;
+  height: fit-content;
+  max-width: 280px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-direction: column;
+
+  img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  #card-bottom {
+    p:nth-child(1) {
+      font-size: 20px;
+    }
+    p:nth-child(2) {
+      color: lightseagreen;
+      font-size: 14px;
+    }
+    p:nth-child(3) {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+}
