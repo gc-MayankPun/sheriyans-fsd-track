@@ -15,6 +15,7 @@ This repository contains all my assignments and projects from **Sheriyans Coding
 | Assignment 05 | Bento Grid | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2005/index.html) |
 | Assignment 06 | Aicrea Clone | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2006/index.html) |
 | Assignment 07 | Image Gallery | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2007/index.html) |
+| Assignment 08 | Key Tracker | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2008/index.html) |
 
 ---
 
