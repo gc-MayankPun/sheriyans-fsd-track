@@ -9,29 +9,43 @@
   </head>
   <body>
     <main>
-      <h1>Create User</h1>
       <form>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Enter username"
-        />
-        <input
-          type="text"
-          name="occupation"
-          id="occupation"
-          placeholder="Enter occupation"
-        />
-        <input type="text" name="bio" id="bio" placeholder="Enter bio" />
-        <input
-          type="text"
-          name="pfp"
-          id="pfp"
-          placeholder="Enter profile link"
-        />
+        <h1>Create User</h1>
+        
+        <div>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter username"
+          />
+          <small id="usernameError"></small>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="occupation"
+            id="occupation"
+            placeholder="Enter occupation"
+          />
+          <small id="occupationError"></small>
+        </div>
+        <div>
+          <input type="text" name="bio" id="bio" placeholder="Enter bio" />
+          <small id="bioError"></small>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="pfp"
+            id="pfp"
+            placeholder="Enter profile link"
+          />
+          <small id="pfpError"></small>
+        </div>
         <input type="submit" id="btn" value="Create user" />
       </form>
+
       <div class="container">
         <div class="card">
           <img
@@ -61,3 +75,4 @@
     <script type="module" src="script.js"></script>
   </body>
 </html>
+

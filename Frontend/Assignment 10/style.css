@@ -16,44 +16,51 @@ main {
   width: 100%;
   background-color: #111;
   color: white;
-  padding: 20px 10px;
 }
 main h1 {
   text-align: center;
 }
 main form {
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   gap: 10px;
 }
-main form input {
+main form div {
+  width: 50%;
+}
+main form div input {
   background-color: transparent;
   padding: 10px 15px;
   color: white;
-  width: 50%;
+  width: 100%;
   outline: none;
   border-radius: 5px;
   border: 0.1px solid white;
   /* Prevent color flicker when autofill or suggestions appear */
 }
-main form input::-moz-placeholder {
+main form div input::-moz-placeholder {
   color: grey;
 }
-main form input::placeholder {
+main form div input::placeholder {
   color: grey;
 }
-main form input:focus {
+main form div input:focus {
   border-color: #00b894;
 }
-main form input:-webkit-autofill,
-main form input input:-webkit-autofill:hover, main form input:-webkit-autofill:focus {
+main form div input:-webkit-autofill,
+main form div input input:-webkit-autofill:hover, main form div input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
   -webkit-text-fill-color: #fff !important;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
+}
+main form div small {
+  display: block;
+  margin-top: 10px;
+  color: rgb(202, 41, 41);
 }
 main form input[type=submit] {
   margin-top: 15px;
@@ -77,11 +84,13 @@ main form #btn:active {
   scale: 0.9;
 }
 main .container {
-  height: 50vh;
+  overflow: hidden;
+  height: 45vh;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px 15px;
+  padding: 20px 30px;
+  padding: 20px 80px;
   overflow-y: auto;
 }
 main .container::-webkit-scrollbar {

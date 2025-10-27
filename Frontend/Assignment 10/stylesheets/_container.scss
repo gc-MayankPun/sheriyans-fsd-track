@@ -1,11 +1,13 @@
 @import "./card";
 
 @mixin container-style() {
-  height: 50vh;
+  overflow: hidden;
+  height: 45vh;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px 15px;
+  padding: 20px 30px;
+  padding: 20px 80px;
   overflow-y: auto;
 
   &::-webkit-scrollbar{

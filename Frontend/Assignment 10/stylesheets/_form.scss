@@ -2,18 +2,28 @@
 @import "./input";
 
 @mixin form-style() {
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   gap: 10px;
 
-  input {
-    @include input-style();
+  div {
+    width: 50%;
+
+    input {
+      @include input-style();
+    }
+
+    small{
+      display: block;
+      margin-top: 10px;
+      color: rgb(202, 41, 41);
+    }
   }
 
-  input[type="submit"]{
+  input[type="submit"] {
     margin-top: 15px;
   }
 
