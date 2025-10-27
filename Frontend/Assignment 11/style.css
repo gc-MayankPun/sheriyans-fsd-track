@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 20%, #0a0a0a, #000);
+  overflow: hidden;
+}
+
+.glass-box {
+  width: 260px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.glass-box h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.blink {
+  animation: blink 1s ease-in-out infinite alternate;
+}
+
+.progress-container {
+  width: 80%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, #00ffaa, #0077ff);
+  border-radius: 10px;
+}
+
+.percent {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  display: none;
+  padding: 10px 22px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(14, 110, 83);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  will-change: scale;
+  transition: 0.3s ease;
+  margin-bottom: 15px;
+  &:hover {
+    background-color: rgb(14, 68, 53);
+  }
+  &:active {
+    scale: 0.9;
+  }
+}
+
+.show {
+  background: radial-gradient(circle at 20% 20%, #0a0a0a, #000);
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.show video {
+  height: 100%;
+  width: 100%;
+}
