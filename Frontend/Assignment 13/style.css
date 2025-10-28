@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+main input[type=search] {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid lightseagreen;
+  background-color: transparent;
+  color: white;
+  width: 50%;
+}
+main input[type=search]::-moz-placeholder {
+  color: gray;
+}
+main input[type=search]::placeholder {
+  color: gray;
+}
+main .container {
+  height: 100%;
+  width: 100%;
+  padding: 40px 30px 20px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+main .container::-webkit-scrollbar {
+  width: 6px; /* scrollbar width */
+}
+main .container::-webkit-scrollbar-track {
+  background: #0f0f0f; /* track background */
+  border-radius: 10px;
+}
+main .container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffcc, #0099ff);
+  border-radius: 10px;
+}
+main .container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00ffaa, #00ccff);
+}
+main .container p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+main .container .card {
+  border: 1px solid lightseagreen;
+  height: 250px;
+  width: 200px;
+  border-radius: 10px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+main .container .card .text-box {
+  border-top: 2px solid white;
+  border-top: 2px solid lightseagreen;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100%;
+  border-top-right-radius: 40px;
+  background-color: rgba(17, 17, 17, 0.6705882353);
+  background-color: rgba(17, 17, 17, 0.8);
+  position: absolute;
+  padding: 10px 15px;
+  padding: 10px;
+  bottom: 0;
+}
+main .container .card .text-box p:nth-child(1) {
+  font-size: 16px;
+}
+main .container .card .text-box p:nth-child(2) {
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */

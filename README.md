@@ -20,6 +20,7 @@ This repository contains all my assignments and projects from **Sheriyans Coding
 | Assignment 10 | Profile Creator | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2010/index.html) |
 | Assignment 11 | Download UI | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2011/index.html) |
 | Assignment 12 | Theme Toggle | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2012/index.html) |
+| Assignment 13 | Search Filter | [View Demo](https://gc-mayankpun.github.io/sheriyans-fsd-track/Frontend/Assignment%2013/index.html) |
 
 ---
 
