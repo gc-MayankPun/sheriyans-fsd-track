@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0d7ca76c1a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="controls">
+        <div class="control" id="add-control">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="control" id="move-up-control">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div class="control" id="move-down-control">
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="https://imgs.search.brave.com/3oLABXcAj8p_WUXbHcYCDAD7GHwf0pgp4NpwG_gtPsk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvYW5p/bWUtZ2lybHMtcGZw/LXNpbmlzdGVyLWc3/MzZ5cmx6MzAza25v/aTIuanBn"
+            alt="card img pfp"
+          />
+          <h2>Fatima Saheb</h2>
+          <div class="location">
+            <h3>Home Town</h3>
+            <h3>Singapore</h3>
+          </div>
+          <div class="book-logs">
+            <h3>Booklogs</h3>
+            <h3>3 times</h3>
+          </div>
+          <div class="reach-out">
+            <button><i class="fa-solid fa-phone"></i> Call</button>
+            <button>Message</button>
+          </div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+      <div class="theme-changer">
+        <div class="theme" id="theme-black"></div>
+        <div class="theme" id="theme-purple"></div>
+        <div class="theme" id="theme-brown"></div>
+        <div class="theme" id="theme-cyan"></div>
+      </div>
+    </div>
+    <div class="note-container">
+      <form>
+        <h2>New Call</h2>
+        <div class="input-div">
+          <h3>Image URL</h3>
+          <p class="error-message"></p>
+          <input
+            type="text"
+            name="image-url"
+            id="image-url"
+            placeholder="https://example.com/photos.jpg"
+          />
+        </div>
+        <div class="input-div">
+          <h3>Full Name</h3>
+          <p class="error-message"></p>
+          <input
+            type="text"
+            name="full-name"
+            id="full-name"
+            placeholder="Enter full name"
+          />
+        </div>
+        <div class="input-div">
+          <h3>Home Town</h3>
+          <p class="error-message"></p>
+          <input
+            type="text"
+            name="home-town"
+            id="home-town"
+            placeholder="Enter home town"
+          />
+        </div>
+        <div class="input-div">
+          <h3>Purpose</h3>
+          <p class="error-message"></p>
+          <input
+            type="text"
+            name="purpose"
+            id="purpose"
+            placeholder="e.g., Quik appointment note"
+          />
+        </div>
+        <div class="input-div">
+          <h3>Category</h3>
+          <div class="category-div">
+            <input type="radio" name="purpose" id="Emergency" />
+            <label for="Emergency">Emergency</label>
+          </div>
+          <div class="category-div">
+            <input type="radio" name="purpose" id="Important" />
+            <label for="Important">Important</label>
+          </div>
+          <div class="category-div">
+            <input type="radio" name="purpose" id="Urgent" />
+            <label for="Urgent">Urgent</label>
+          </div>
+          <div class="category-div">
+            <input type="radio" name="purpose" id="No Rush" />
+            <label for="No Rush">No Rush</label>
+          </div>
+        </div>
+        <div class="input-btn-container">
+            <button>Create Note</button>
+            <button id="close-note">Close</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+:root {
+  --accent-color: rgb(82, 81, 81);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+  color: white;
+}
+
+body .form-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: row;
+}
+body .form-container .controls {
+  height: 35vh;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+body .form-container .controls .control {
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+body .form-container .controls .control:hover {
+  box-shadow: 0 0px 10px 1px var(--accent-color);
+  background-color: var(--accent-color);
+}
+body .form-container .controls .control:active {
+  transform: scale(0.9);
+}
+body .form-container .card-container {
+  position: relative;
+  height: 35vh;
+  width: 30%;
+}
+body .form-container .card-container .card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+  background-color: #111;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  flex-direction: column;
+}
+body .form-container .card-container .card img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+body .form-container .card-container .card h2 {
+  font-weight: 500;
+}
+body .form-container .card-container .card h3 {
+  font-weight: lighter;
+  font-size: 16px;
+}
+body .form-container .card-container .card .location, body .form-container .card-container .card .book-logs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  width: 100%;
+}
+body .form-container .card-container .card .reach-out {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row;
+}
+body .form-container .card-container .card .reach-out button:nth-child(1) {
+  outline: none;
+  border: none;
+  width: 5rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+body .form-container .card-container .card .reach-out button:nth-child(1):active {
+  transform: scale(0.9);
+}
+body .form-container .card-container .card .reach-out button:nth-child(1):hover {
+  border: 1px solid var(--accent-color);
+}
+body .form-container .card-container .card .reach-out button:nth-child(1) i {
+  font-size: 12px;
+}
+body .form-container .card-container .card .reach-out button:nth-child(2) {
+  outline: none;
+  border: none;
+  width: 5rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+body .form-container .card-container .card .reach-out button:nth-child(2):active {
+  transform: scale(0.9);
+}
+body .form-container .card-container .card .reach-out button:nth-child(2):hover {
+  border: 1px solid var(--accent-color);
+}
+body .form-container .card-container .card:nth-child(1) {
+  z-index: 3;
+}
+body .form-container .card-container .card:nth-child(2) {
+  z-index: 2;
+  top: 0.5rem;
+  width: 98%;
+}
+body .form-container .card-container .card:nth-child(3) {
+  z-index: 1;
+  top: 1rem;
+  width: 96%;
+}
+body .form-container .theme-changer {
+  height: 35vh;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+body .form-container .theme-changer .theme {
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body .form-container .theme-changer .theme:hover {
+  box-shadow: 0 0px 5px 5px var(--accent-color);
+}
+body .form-container .theme-changer .theme:active {
+  transform: scale(0.8);
+}
+body .form-container .theme-changer .theme:nth-child(1) {
+  background-color: black;
+}
+body .form-container .theme-changer .theme:nth-child(2) {
+  background-color: purple;
+}
+body .form-container .theme-changer .theme:nth-child(3) {
+  background-color: brown;
+}
+body .form-container .theme-changer .theme:nth-child(4) {
+  background-color: cyan;
+}
+body .note-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  padding: 1rem;
+  display: none;
+}
+body .note-container form {
+  border: 1px solid var(--accent-color);
+  width: 35%;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .note-container form .input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .note-container form .input-div h3 {
+  font-size: 16px;
+}
+body .note-container form .input-div .error-message {
+  color: red;
+  font-size: 14px;
+}
+body .note-container form .input-div input {
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  /* Prevent color flicker when autofill or suggestions appear */
+}
+body .note-container form .input-div input:-webkit-autofill,
+body .note-container form .input-div input input:-webkit-autofill:hover, body .note-container form .input-div input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+body .note-container form .input-div .category-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+body .note-container form .input-div .category-div label {
+  cursor: pointer;
+}
+body .note-container form .input-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+body .note-container form .input-btn-container button:hover {
+  box-shadow: 0 0px 10px 1px var(--accent-color);
+}
+body .note-container form .input-btn-container button:nth-child(1) {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 1rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body .note-container form .input-btn-container button:nth-child(1):active {
+  transform: scale(0.9);
+}
+body .note-container form .input-btn-container button:nth-child(2) {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 1rem;
+  color: white;
+  background-color: darkred;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+body .note-container form .input-btn-container button:nth-child(2):active {
+  transform: scale(0.9);
+}/*# sourceMappingURL=style.css.map */

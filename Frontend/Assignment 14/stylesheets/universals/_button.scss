@@ -1,0 +1,14 @@
+@mixin button-style($width, $padding, $radius, $text-color: white, $bg-color: transparent) {
+  outline: none;
+  border: none;
+  width: $width;
+  padding: $padding;
+  border-radius: $radius;
+  color: $text-color;
+  background-color: $bg-color;
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:active {
+    transform: scale(0.9);
+  }
+}

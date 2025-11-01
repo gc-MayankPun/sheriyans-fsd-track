@@ -1,0 +1,79 @@
+@import "../universals/button";
+@import "../universals/flex";
+
+@mixin cardContainer-style() {
+  position: relative;
+  height: 35vh;
+  width: 30%;
+
+  .card {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+    background-color: #111;
+    padding: 1rem 1.5rem;
+    @include flex-style(space-between, flex-start, $direction: column);
+
+    img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    h2 {
+      font-weight: 500;
+    }
+    h3 {
+      font-weight: lighter;
+      font-size: 16px;
+    }
+
+    .location, .book-logs {
+      @include flex-style(space-between);
+      width: 100%;
+    }
+
+    .reach-out {
+      @include flex-style(flex-start, $gap: 0.5rem);
+
+      button:nth-child(1) {
+        @include button-style(5rem, 5px 10px, 10px, white, black);
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid var(--accent-color);
+        }
+
+        i {
+          font-size: 12px;
+        }
+      }
+      button:nth-child(2) {
+        @include button-style(5rem, 5px 10px, 10px, white);
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid var(--accent-color);
+        }
+      }
+    }
+  }
+  .card:nth-child(1) {
+    z-index: 3;
+  }
+  .card:nth-child(2) {
+    z-index: 2;
+    top: 0.5rem;
+    width: 98%;
+  }
+  .card:nth-child(3) {
+    z-index: 1;
+    top: 1rem;
+    width: 96%;
+  }
+}

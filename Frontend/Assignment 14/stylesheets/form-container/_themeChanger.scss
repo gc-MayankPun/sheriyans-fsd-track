@@ -1,0 +1,34 @@
+@import "../universals/flex";
+
+@mixin themeChanger-style() {
+  height: 35vh;
+  width: 5%;
+  @include flex-style($align: flex-start, $gap: 0.5rem, $direction: column);
+
+  .theme {
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+      box-shadow: 0 0px 5px 5px var(--accent-color);
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  .theme:nth-child(1){
+    background-color: black;
+  }
+  .theme:nth-child(2){
+    background-color: purple;
+  }
+  .theme:nth-child(3){
+    background-color: brown;
+  }
+  .theme:nth-child(4){
+    background-color: cyan;
+  }
+}

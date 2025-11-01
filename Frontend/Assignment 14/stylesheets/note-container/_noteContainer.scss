@@ -1,0 +1,77 @@
+@import "../universals/button";
+@import "../universals/flex";
+
+@mixin noteContainer-style() {
+  width: 100%;
+  @include flex-style();
+  padding: 1rem;
+  // padding: 2rem 1rem;
+
+  form {
+    border: 1px solid var(--accent-color);
+    width: 35%;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .input-div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        font-size: 16px;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 14px;
+      }
+
+      input {
+        background-color: transparent;
+        border: 1px solid var(--accent-color);
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: white;
+
+        /* Prevent color flicker when autofill or suggestions appear */
+        &:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+          -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+          -webkit-text-fill-color: #fff !important;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      }
+
+      .category-div {
+        @include flex-style(flex-start, $gap: 10px);
+
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .input-btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+
+      button {
+        &:hover {
+          box-shadow: 0 0px 10px 1px var(--accent-color);
+        }
+      }
+      button:nth-child(1) {
+        @include button-style(100%, 10px, 1rem, white, black);
+      }
+      button:nth-child(2) {
+        @include button-style(100%, 10px, 1rem, white, darkred);
+      }
+    }
+  }
+}
