@@ -23,10 +23,12 @@ body {
 body {
   .form-container {
     @include formContainer-style();
+    user-select: none;
   }
   
   .note-container{
     @include noteContainer-style();
     display: none;
+    user-select: none;
   }
 }

@@ -24,6 +24,10 @@
         font-size: 16px;
       }
 
+      .radio-text-container{
+        @include flex-style(space-between);
+      }
+
       .error-message {
         color: red;
         font-size: 14px;

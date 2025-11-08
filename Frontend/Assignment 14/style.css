@@ -25,6 +25,9 @@ body .form-container {
   align-items: center;
   gap: 1.5rem;
   flex-direction: row;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 body .form-container .controls {
   height: 35vh;
@@ -57,6 +60,21 @@ body .form-container .card-container {
   position: relative;
   height: 35vh;
   width: 30%;
+}
+body .form-container .card-container .behind-card {
+  display: none !important;
+}
+body .form-container .card-container .empty-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+}
+body .form-container .card-container .empty-container .empty {
+  font-size: 18px;
 }
 body .form-container .card-container .card {
   height: 100%;
@@ -91,7 +109,8 @@ body .form-container .card-container .card h3 {
   font-weight: lighter;
   font-size: 16px;
 }
-body .form-container .card-container .card .location, body .form-container .card-container .card .book-logs {
+body .form-container .card-container .card .location,
+body .form-container .card-container .card .book-logs {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,6 +220,9 @@ body .note-container {
   flex-direction: row;
   padding: 1rem;
   display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 body .note-container form {
   border: 1px solid var(--accent-color);
@@ -218,6 +240,13 @@ body .note-container form .input-div {
 }
 body .note-container form .input-div h3 {
   font-size: 16px;
+}
+body .note-container form .input-div .radio-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
 }
 body .note-container form .input-div .error-message {
   color: red;

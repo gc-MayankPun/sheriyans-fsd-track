@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Note Taking App</title>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/0d7ca76c1a.js"
@@ -23,29 +23,7 @@
           <i class="fa-solid fa-arrow-down"></i>
         </div>
       </div>
-      <div class="card-container">
-        <div class="card">
-          <img
-            src="https://imgs.search.brave.com/3oLABXcAj8p_WUXbHcYCDAD7GHwf0pgp4NpwG_gtPsk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvYW5p/bWUtZ2lybHMtcGZw/LXNpbmlzdGVyLWc3/MzZ5cmx6MzAza25v/aTIuanBn"
-            alt="card img pfp"
-          />
-          <h2>Fatima Saheb</h2>
-          <div class="location">
-            <h3>Home Town</h3>
-            <h3>Singapore</h3>
-          </div>
-          <div class="book-logs">
-            <h3>Booklogs</h3>
-            <h3>3 times</h3>
-          </div>
-          <div class="reach-out">
-            <button><i class="fa-solid fa-phone"></i> Call</button>
-            <button>Message</button>
-          </div>
-        </div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
+      <div class="card-container"></div>
       <div class="theme-changer">
         <div class="theme" id="theme-black"></div>
         <div class="theme" id="theme-purple"></div>
@@ -97,27 +75,40 @@
           />
         </div>
         <div class="input-div">
-          <h3>Category</h3>
+          <div class="radio-text-container">
+            <h3>Category</h3>
+            <p class="error-message"></p>
+          </div>
           <div class="category-div">
-            <input type="radio" name="purpose" id="Emergency" />
+            <input
+              type="radio"
+              name="purpose"
+              id="Emergency"
+              value="Emergency"
+            />
             <label for="Emergency">Emergency</label>
           </div>
           <div class="category-div">
-            <input type="radio" name="purpose" id="Important" />
+            <input
+              type="radio"
+              name="purpose"
+              id="Important"
+              value="Important"
+            />
             <label for="Important">Important</label>
           </div>
           <div class="category-div">
-            <input type="radio" name="purpose" id="Urgent" />
+            <input type="radio" name="purpose" id="Urgent" value="Urgent" />
             <label for="Urgent">Urgent</label>
           </div>
           <div class="category-div">
-            <input type="radio" name="purpose" id="No Rush" />
+            <input type="radio" name="purpose" id="No Rush" value="No Rush" />
             <label for="No Rush">No Rush</label>
           </div>
         </div>
         <div class="input-btn-container">
-            <button>Create Note</button>
-            <button id="close-note">Close</button>
+          <button id="create-note-btn" type="submit">Create Note</button>
+          <button id="close-note" type="button">Close</button>
         </div>
       </form>
     </div>

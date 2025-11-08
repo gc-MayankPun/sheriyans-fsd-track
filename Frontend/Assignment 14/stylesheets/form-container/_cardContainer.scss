@@ -6,6 +6,21 @@
   height: 35vh;
   width: 30%;
 
+  .behind-card {
+    display: none !important;
+  }
+
+  .empty-container{
+    height: 100%;
+    width: 100%;
+    @include flex-style();
+
+    .empty{
+      font-size: 18px;
+    }
+  }
+
+
   .card {
     height: 100%;
     width: 100%;
@@ -35,7 +50,8 @@
       font-size: 16px;
     }
 
-    .location, .book-logs {
+    .location,
+    .book-logs {
       @include flex-style(space-between);
       width: 100%;
     }
