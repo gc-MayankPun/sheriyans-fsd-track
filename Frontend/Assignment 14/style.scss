@@ -1,7 +1,7 @@
 @import "./stylesheets/form-container/formContainer";
 @import "./stylesheets/note-container/noteContainer";
 
-:root{
+:root {
   --accent-color: rgb(82, 81, 81);
 }
 
@@ -25,8 +25,8 @@ body {
     @include formContainer-style();
     user-select: none;
   }
-  
-  .note-container{
+
+  .note-container {
     @include noteContainer-style();
     display: none;
     user-select: none;

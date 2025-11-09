@@ -61,9 +61,6 @@ body .form-container .card-container {
   height: 35vh;
   width: 30%;
 }
-body .form-container .card-container .behind-card {
-  display: none !important;
-}
 body .form-container .card-container .empty-container {
   height: 100%;
   width: 100%;
@@ -87,6 +84,7 @@ body .form-container .card-container .card {
   border: 1px solid var(--accent-color);
   background-color: #111;
   padding: 1rem 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.25, 1.25, 0.5, 1), opacity 0.3s cubic-bezier(0.25, 1.25, 0.5, 1);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -170,12 +168,10 @@ body .form-container .card-container .card:nth-child(1) {
 body .form-container .card-container .card:nth-child(2) {
   z-index: 2;
   top: 0.5rem;
-  width: 98%;
 }
 body .form-container .card-container .card:nth-child(3) {
   z-index: 1;
   top: 1rem;
-  width: 96%;
 }
 body .form-container .theme-changer {
   height: 35vh;

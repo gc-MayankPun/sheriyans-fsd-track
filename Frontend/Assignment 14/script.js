@@ -20,6 +20,7 @@ const homeTownInput = form.querySelector("#home-town");
 const purposeInput = form.querySelector("#purpose");
 const categoryRadios = form.querySelectorAll("input[type='radio']");
 const createNoteBtn = form.querySelector("#create-note-btn");
+const container = document.querySelector(".card-container");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -88,9 +89,7 @@ function saveToLocalStorage(obj) {
 }
 
 function renderCards() {
-  const container = document.querySelector(".card-container");
   const allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
   container.innerHTML = ""; // clear old cards
 
   if (allTasks.length === 0) {
@@ -101,11 +100,10 @@ function renderCards() {
     return;
   }
 
-  console.log("I runned!");
   allTasks.forEach((task, indx) => {
     const card = document.createElement("div");
     card.classList.add("card");
-    if (indx > 2) card.classList.add("behind-card");
+    styleCard(card, indx);
 
     card.innerHTML = `
       <img src="${task.imageUrl}" alt="card img pfp" />
@@ -126,7 +124,6 @@ function renderCards() {
     container.appendChild(card);
   });
 }
-
 renderCards(); // Initial render
 
 (function moveCard() {
@@ -135,31 +132,36 @@ renderCards(); // Initial render
 
   // Move last card to the top
   upCard.addEventListener("click", () => {
-    let allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    if (allTasks.length === 0) return;
-
-    console.log("I up the cards");
-    if (allTasks.length > 1) {
-      const last = allTasks.pop();
-      allTasks.unshift(last);
-      localStorage.setItem("tasks", JSON.stringify(allTasks));
-      renderCards();
+    let lastCard = container.lastElementChild;
+    if (lastCard) {
+      container.insertBefore(lastCard, container.firstElementChild);
+      updateCard();
     }
   });
 
   // Move first card to the bottom
   downCard.addEventListener("click", () => {
-    let allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    if (allTasks.length === 0) return;
-    
-    console.log("I down the cards");
-    if (allTasks.length > 1) {
-      const first = allTasks.shift();
-      allTasks.push(first);
-      localStorage.setItem("tasks", JSON.stringify(allTasks));
-      renderCards();
+    let firstCard = container.firstElementChild;
+    if (firstCard) {
+      container.appendChild(firstCard);
+      updateCard();
     }
   });
 })();
 
-// 7:06
+function updateCard() {
+  const cards = document.querySelectorAll(".card-container .card");
+
+  cards.forEach((card, indx) => {
+    styleCard(card, indx);
+  });
+}
+
+function styleCard(card, indx) {
+  card.style.zIndex = 3 - indx;
+  card.style.transform = `translateX(-50%) translateY(${indx * 10}px) scale(${
+    1 - indx * 0.02
+  })`;
+  card.style.opacity = `${1 - indx * 0.02}`;
+  if (indx > 2) card.classList.add("behind-card");
+}

@@ -6,20 +6,15 @@
   height: 35vh;
   width: 30%;
 
-  .behind-card {
-    display: none !important;
-  }
-
-  .empty-container{
+  .empty-container {
     height: 100%;
     width: 100%;
     @include flex-style();
 
-    .empty{
+    .empty {
       font-size: 18px;
     }
   }
-
 
   .card {
     height: 100%;
@@ -32,6 +27,8 @@
     border: 1px solid var(--accent-color);
     background-color: #111;
     padding: 1rem 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.25, 1.25, 0.5, 1),
+      opacity 0.3s cubic-bezier(0.25, 1.25, 0.5, 1);
     @include flex-style(space-between, flex-start, $direction: column);
 
     img {
@@ -85,11 +82,11 @@
   .card:nth-child(2) {
     z-index: 2;
     top: 0.5rem;
-    width: 98%;
+    // width: 98%;
   }
   .card:nth-child(3) {
     z-index: 1;
     top: 1rem;
-    width: 96%;
+    // width: 96%;
   }
 }
