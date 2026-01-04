@@ -116,3 +116,11 @@ button {
   height: 100%;
   width: 100%;
 }
+
+#close{
+  color: red;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+}
